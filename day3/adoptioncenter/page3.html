@@ -1,0 +1,68 @@
+<html>
+<head>
+    <title>Rainbow Adoption Center</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<!-- Container is to wrap everything -->
+<div id="container">
+<!-- Website Brand -->
+<header>
+    <div class="main-header">
+        <div class="logo">
+            <img src="images/rainbowlogo.png" alt="Rainbow Logo" width="125">
+        </div>
+        <!-- Main Navigation -->
+        <nav class="main-menu">
+            <ul class="menuItems">
+                <li><a href="page1.html">Home</a></li>
+                <li><a href="page2.html">Adoption Center</a></li>
+                <li><a href="page3.html">Sign Up</a></li>
+                <li><a href="page4.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!-- Main Content -->
+<main>
+    <h1>Please join us!</h1>
+    <form acxtion="/signup" method="post">
+        <fieldset>
+            <legend>User Personal Information</legend>
+            <div class="signupinfo">
+                <label>Your Full Name</label>
+                <input type="text" name="full_name">
+                <label>Your Email Address</label>
+                <input type="email" name="email">
+                <label>Your Phone Number</label>
+                <input type="text" name="phone">
+            </div>
+            <div class="radios">
+            <label>Your Gender</label>
+                <input type="radio" name="gender" value="male">Male
+                <input type="radio" name="gender" value="femaile">Female
+                <input type="radio" name="gender" value="other">Other
+            </div>
+            <div class="selectmenu">
+                <label>How should we contact you?</label>
+                <select name="contact_method">
+                    <option>Email</option>
+                    <option>Phone</option>
+                </select>
+            </div>
+            <div class="commentbox">
+                <label>Please let us know what kind of adoption events you are interested in</label>
+                <textarea rows="5" columns="40"></textarea>
+            </div>
+            <div class="button">
+                <input type="submit" value="Sign Up">
+            </div>
+        </fieldset>
+    </form>
+</main>
+<!-- Footer -->
+    <footer>&copy; Copyright 2023 Rainbow Adoption Center</footer>
+</div>
+<!-- End Container -->
+</body>
+</html>

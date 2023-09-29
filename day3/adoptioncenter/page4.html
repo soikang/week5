@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>Rainbow Adoption Center</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+    <!-- Container is to wrap everything -->
+    <div id="container">
+    <!-- Website Brand -->
+    <header>
+        <div class="main-header">
+            <div class="logo">
+                <img src="images/rainbowlogo.png" alt="Rainbow Logo" width="125">
+            </div>
+            <!-- Main Navigation -->
+            <nav class="main-menu">
+                <ul class="menuItems">
+                    <li><a href="page1.html">Home</a></li>
+                    <li><a href="page2.html">Adoption Center</a></li>
+                    <li><a href="page3.html">Sign Up</a></li>
+                    <li><a href="page4.html">Gallery</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<!-- Main Content -->
+    <main>
+        <h1>Photo Gallery</h1>
+        <p>Please check out our puppies that have been adopted!</p>  
+        <div class="image-container">
+        <ul id="album">
+        
+        </ul>
+        </div>
+
+    </main>
+
+</div>
+<script>
+    var photos = []; //declaring an empty array to store image element
+    var fileNames = []; // declaring an empty elemtn to store iamge fiilename
+    var imageList = []; // declaring an empty array to store html list that contains image
+    var openList = "<li class='photo'>" // declaring a variable to contain the open list tag
+    var closeList = "</li>"; // declaring a variable to contain the close list tag
+
+    var openCaptionTag = "<figcaption>"; // declaring a variable to contain the open caption tag
+    var closeCaptionTag = "</figcaption>"; // decalring a variable to contain the close caption tag
+    var captionTexts = []; //declaring an empty array to store captions
+
+    var openDescTag = "<div class='description'>";
+    var closeDescTag = "</div>";
+    var descTexts = [];
+
+    // var infoText = ["information about the puppy 1", "information about the puppy 2","information about the puppy 3","information about the puppy 4","information about the puppy 5","information about the puppy 6","information about the puppy 7","information about the puppy 8","information about the puppy 9","information about the puppy 10",]; // popup info box
+    
+    var image; //declaring empty variable to store the assembled image list codes
+    //create a loop to create 6 images starting with index of 0
+    for (var i = 0; i < 10; i++) {
+        // create HTML elements for images
+        fileNames.push("puppy"+(i+1)); // create image filename and store in the array
+        captionTexts.push("cute puppy "+ (i+1));
+        descTexts.push("Look at this puppy " + (i+1));
+        photos.push("<img src='images/" + fileNames[i]+ ".jpg'>" 
+        + openCaptionTag + captionTexts[i] + closeCaptionTag + 
+        openDescTag + descTexts[i] + closeDescTag + 
+        "<div class='info-box'>" + "<h1>" + captionTexts[i] + "</h1>" + 
+            "information about puppy "+(i+1) +
+            "<span class='close-button' onclick='closeDescription(this)'>Click This to Close</span>" 
+            + "</div>"); // assembling the filename into a large element
+        image = openList + photos[i] + closeList; // assemble image element from previous arrays
+        imageList.push(image); //store the image element code into an array 
+    }
+
+    //display all six images
+    document.getElementById("album").innerHTML = imageList;
+</script>
+
+<!-- functions to display info box and close the box -->
+<script src="script.js"></script>
+
+<!-- Footer -->
+<footer>&copy; Copyright 2023 Rainbow Adoption Center</footer>
+<!-- End Container -->
+</body>
+</html>
+

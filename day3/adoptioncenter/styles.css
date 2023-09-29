@@ -1,0 +1,304 @@
+/* main background image */
+body {
+    background-image: url("images/dogcat.png");
+}
+
+/* Header */
+header {
+    width: 100%;
+    min-height: 200px;
+    padding-top: 3em;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.main-header {
+    background-color: rgb(255, 255, 255, 0.8);
+    width: 1000px; /* HW instructions says 700px but 'contact' goes to another line so had to adjust to 750px - changed it back to 700px again */
+    /* margin: 2em auto 0 auto; */
+    min-height: 100px;
+    height: 100px;
+}
+.main-header .logo img {
+    width: 100px;
+    height: 100px;
+    margin: 0 0 0 0;
+    float: left;
+}
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+h1 {
+    font-size: 30px;
+    color: #E3645E;
+    background-color: fff;
+    max-width: 60%;
+}
+h2 {
+    color: #B4D9D7;
+    background-color: fff;
+    max-width: 60%;
+}
+h3 {
+    color: #005072;
+    background-color: fff;
+    max-width: 60%;
+}
+p {
+    font-size: 15px;
+    background-color: fff;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    max-width: 60%;
+}
+/* Navigation */
+.main-menu {
+    margin-left: 127px; 
+    font-weight: 400;
+}
+.main-menu ul li {
+    list-style-type: none;
+    display: inline-block;
+    font-weight: bold;
+    /* float: left; */
+    padding-left: 25px;
+    padding-right: 25px;
+    /* border-left: 1px solid rgba(202, 204, 202, 0.6); */
+    line-height: 100px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.main-menu ul li a {
+    text-decoration: none;
+    color: #888;
+}
+.main-menu ul li a:hover {
+    color: #8254ff;
+}
+.main-menu ul li.active {
+    background:  #9ed034;
+    border: none;
+}
+.main-menu ul li.active a {
+    color: #fff;
+}
+
+/* home */
+.welcome-image {
+
+    
+}
+#corgi img {
+
+}  
+
+/* table */
+table {
+    width: 1000px;
+    /* margin: 10px auto 0 auto; */
+}
+caption {
+    height: 70px;
+    color: #B4D9D7;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+thead {
+    background: #B4D9D7;
+}
+tbody {
+    background: #eeffe6;
+    text-align: center;
+}
+th,td {
+    width: 225px;
+    height: 75px;
+    vertical-align: middle;
+    border: solid 1px #852b1b;
+}
+th:first-child {
+    width: 125px;
+    height: 50px;
+    background: #84BD9B;
+    color: #fff;
+}
+td:first-child {
+    font-weight: bold;
+    background: #B4D9D7;
+}
+
+/* Main */
+main {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+main img {
+    /* width: 100%; */
+    /* height: 50vh; */
+}
+.main-text h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main-text h3 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main-text p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Gallery */
+.image-container {
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: repeat(5, 250px); */
+    grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));  /* automatically adjust rows */
+    justify-content: center;
+    height: 80%;
+}
+main .photo {
+    max-width: 400px;
+}
+
+main #album {
+    list-style-type: none;
+}
+
+main #album .photo img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+main figcaption {
+    max-width: 400px;
+    text-align: center;
+    background-color: #fff;
+}
+
+main .description {
+    visibility: hidden;
+    position: relative;
+    left: 100px;
+    bottom: 200px;
+    background-color: rgb(255, 255, 255, 0.5);
+    padding: 20px;
+    max-width: fit-content;
+}
+main .photo:hover .description{
+    visibility: visible;
+}
+
+main .info-box {
+    display: none;
+    position: fixed;
+    background-color: #c9f5e8;
+    padding: 10px;
+    z-index: 1;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(100%, -50%);
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+main .info-box h1 {
+    font-size: 20px;
+}
+
+main .info-box span {
+    display: inline-block;
+    color: black;
+    margin-top: 2rem;
+    width: 100%;
+    text-align: center;
+}
+
+/* contact */
+.signupinfo{
+    padding-top: 10px;
+    padding-left: 20px;
+}
+form {
+    padding-top: 20px;
+}
+form legend {
+    color: #4977d1;
+    text-transform: uppercase;
+    font-weight: bold;;
+}
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+/* text box */
+.textbox {
+    padding-left: 20px;
+}
+.textbox label {
+    display: block;
+    padding-top: 10px;
+}
+input {
+    width: 500px;
+    margin-bottom: 10px;
+}
+/* radio buttons */
+.radios {
+    padding-left: 20px;
+}
+input[type="radio"]{
+    width: 20px;
+}
+/* text box */
+.selectmenu {
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+.selectmenu select {
+    width: 200px;
+    height: 20px;
+    text-align: center;;
+}
+/* text box */
+.commentbox label {
+    display: block;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+textarea {
+    width: 500px;
+    height: 200px;
+    margin-left: 20px;
+}
+/* inqurie button */
+form .button{
+    margin: 10px 0 10px 0;
+    width: 520px;
+    display: flex;
+    justify-content: end;
+}
+form .button input[type=submit]{
+    background-color: #4977d1;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-weight: bold;
+    margin: 10px 0 10px 0;
+    width: 100px;
+    height: 35px;
+}
+
+/* footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 20px;   /* Height of the footer */
+    background: #fff;
+ }
