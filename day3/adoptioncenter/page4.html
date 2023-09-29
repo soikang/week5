@@ -4,45 +4,7 @@
         <link rel="stylesheet" type="text/css" href="styles.css">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <style>
-          /* light box */
-            .backdrop {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.7);
-                display: none;
-                z-index: 9999;
-            }
-
-            .box {
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background-color: white;
-                padding: 20px;
-                display: none;
-                z-index: 10000;
-            }
-
-            .box img {
-                max-width: 100%;
-                max-height: 70%;
-                height: auto;
-            }
-
-            .closeX {
-                /* position: absolute;
-                top: 10px;
-                right: 10px;
-                cursor: pointer; */
-                float: right;
-                cursor: pointer;
-            }
-
-
+        
         </style>
     </head>
     <body>
@@ -127,42 +89,6 @@
 <!-- lightbox -->
 <script>
 //moved to script.js
-// below is the jQuery code for the light box - Week5 day3 lab assignment
-$(document).ready(function () {
-    // Open lightbox on image click
-    $('img').click(function () {
-        var $imgSrc = $(this).attr('src');
-        var $imgAlt = $(this).attr('alt');
-
-        // Clear previous content and add the clicked image to the lightbox
-        $('.box').empty().append(`<div class="closeX">X</div><img src="${$imgSrc}" alt="${$imgAlt}">`);
-        
-        // Show the backdrop and lightbox
-        $('.backdrop').css('display', 'block').animate({ 'opacity': '0.7' }, 300);
-        $('.box').fadeIn();
-        console.log('Image clicked');
-    });
-
-   
-    // Close lightbox on close button or backdrop click
-    $('.backdrop').click(function () {
-        closeLightbox();
-    });
-
-    // Handle "closeX" click event using event delegation
-    // when trying to handle both together in one, it didn't work. 
-    // event delegation to handle the click event for the "closeX" element within the "box" element. 
-    // When the "closeX" element is clicked, it triggers the closeLightbox function, which hides the lightbox and backdrop.
-    $('.box').on('click', '.closeX', function () {
-            closeLightbox();
-    });
-
-    function closeLightbox() {
-        $('.box').fadeOut(function () {
-            $('.backdrop').css('display', 'none').animate({ 'opacity': '0' }, 300);
-        });
-    }
-});
 </script>
 <!-- Footer -->
 <footer>&copy; Copyright 2023 Rainbow Adoption Center</footer>
