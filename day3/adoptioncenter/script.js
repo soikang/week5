@@ -18,3 +18,26 @@ descriptionTexts.forEach(function (description) {
         displayDesc(this);
     });
 });
+
+// below is the jQuery code for the light box - Week5 day3 lab assignment
+$(document).ready(function () {
+    // Open lightbox on image click
+    $('img').click(function () {
+        var $imgSrc = $(this).attr('src');
+        var $imgAlt = $(this).attr('alt');
+
+        // Clear previous content and add the clicked image to the lightbox
+        $('.box').empty().append(`<img src="${$imgSrc}" alt="${$imgAlt}">`);
+        
+        // Show the backdrop and lightbox
+        $('.backdrop').css('display', 'block').animate({ 'opacity': '0.7' }, 300);
+        $('.box').fadeIn();
+    });
+
+    // Close lightbox on close button or backdrop click
+    $('.closeX, .backdrop').click(function () {
+        $('.box').fadeOut(function () {
+            $('.backdrop').css('display', 'none').animate({ 'opacity': '0' }, 300);
+        });
+    });
+});
